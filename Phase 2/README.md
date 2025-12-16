@@ -1,20 +1,19 @@
+# ML Web App v1 — House Prices Prediction (Phase 2: Baseline Model)
+
 ## Phase 2 Overview
 
 This phase introduces the **first working model** for the app.  
-The goal is to establish a **baseline regression model** that can predict house prices from structured tabular data. This sets the benchmark for later improvements.
+We’ll start with the **California Housing dataset** (built into Scikit-learn) for simplicity and speed. Later, we’ll expand to the **Kaggle House Prices dataset** for a more realistic, complex challenge.
 
 ---
 
 ## Objectives
 
-- Select and prepare the dataset (house prices).
-- Perform basic preprocessing:
-- Handle missing values.
-- Encode categorical features.
-- Scale numerical features if needed.
+- Load and prepare the **California Housing dataset**.
+- Perform basic preprocessing (handle missing values, encode features, scale if needed).
 - Train a **baseline regression model** (Linear Regression).
-- Save the trained model using `joblib` for later integration into the Streamlit app.
-- Document model performance with simple metrics (MAE, RMSE, R²).
+- Save the trained model using `joblib`.
+- Evaluate performance with **MAE, RMSE, and R²**.
 
 ---
 
@@ -29,7 +28,7 @@ The goal is to establish a **baseline regression model** that can predict house 
 
 ## Phase 2 Deliverables
 
-- Dataset loaded and cleaned.
+- Dataset loaded and cleaned (California Housing).
 - Preprocessing pipeline implemented.
 - Baseline regression model trained.
 - Model saved for reuse.
@@ -39,4 +38,5 @@ The goal is to establish a **baseline regression model** that can predict house 
 
 ## Next Steps
 
-Phase 3 will focus on **Streamlit app development**, integrating the baseline model into a user interface and enabling predictions through a web form.
+- **Phase 3**: Build the Streamlit app and integrate the baseline model.
+- **Future Expansion**: Switch to **Kaggle House Prices dataset** for richer features and portfolio appeal.
