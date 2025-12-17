@@ -1,11 +1,22 @@
+from typing import cast
 from sklearn.preprocessing import StandardScaler
 from sklearn.datasets import fetch_california_housing
-import pandas as pd
+from sklearn.utils import Bunch
 
-# Load dataset again (or import X, y from step 1 if modularized)
-housing = fetch_california_housing(as_frame=True)
-df = housing.frame
+# Fetch dataset
+result = fetch_california_housing(as_frame=True)
 
+# Ensure correct typing
+housing = cast(Bunch, result)
+
+# Build DataFrame safely
+X = housing.data
+y = housing.target
+
+df = X.copy()
+df["MedHouseVal"] = y
+
+# Split features and target
 X = df.drop("MedHouseVal", axis=1)
 y = df["MedHouseVal"]
 
