@@ -1,88 +1,92 @@
-# ML Web App v1 — House Prices Prediction
+# ML Web App — House Prices Prediction
+
+**Journey to Fullstack AI + Robotics Engineering (Week 11 Milestone)**
+
+---
 
 ## Project Overview
 
-This project is part of my AI & Robotics Engineer portfolio.  
-It demonstrates the end-to-end workflow of building and deploying a **machine learning web application** using **Scikit-learn** and **Streamlit**, deployed on **Streamlit Cloud**.
+This project documents the evolution of a machine learning workflow into a full **Streamlit web application**. Starting from a baseline regression model, each phase adds new functionality, datasets, and professional‑grade features. By Phase 5, the app integrates Kaggle’s House Prices dataset and supports multiple models with performance comparison.
 
-The app predicts **house prices** based on user inputs, showcasing skills in:
-
-- Data preprocessing
-- Model training and evaluation
-- Web app development with Streamlit
-- Cloud deployment
-- Iterative project scaling across phases
+This project is part of my **Week 11 milestone** in my journey to becoming a **Fullstack AI + Robotics Engineer** — demonstrating how disciplined engineering practices can be applied to AI experimentation.
 
 ---
 
-## Project Roadmap (Phases)
+## Objectives
 
-### **Phase 1 — MVP**
-
-- Baseline regression model (Linear Regression).
-- Minimal Streamlit app with input form + prediction output.
-- Deployed on Streamlit Cloud.
-
-### **Phase 2 — Enhanced Modeling**
-
-- Add advanced models (Random Forest, Gradient Boosting).
-- Compare performance metrics (MAE, RMSE, R²).
-- Save and load best-performing model.
-
-### **Phase 3 — UI & Visualization**
-
-- Improve Streamlit interface with clean layout.
-- Add dataset preview and charts (feature distributions).
-- Feature importance visualization.
-
-### **Phase 4 — Deployment & Scaling**
-
-- Optimize app performance.
-- Add error handling for user inputs.
-- Ensure reproducibility with `requirements.txt`.
-- Document deployment steps clearly.
-
-### **Phase 5 — Portfolio Polish**
-
-- Add screenshots of the app.
-- Write reflection on challenges and lessons learned.
-- Share project link and insights on LinkedIn.
-
----
-
-## Tech Stack
-
-- **Python**
-- **Scikit-learn**
-- **Streamlit**
-- **Joblib** (model persistence)
+- Build reproducible ML workflows across multiple phases.
+- Train and evaluate regression models on real datasets.
+- Develop an interactive Streamlit app with user inputs, tabs, and visualizations.
+- Compare multiple models (Linear Regression, Random Forest, Gradient Boosting).
+- Document the project for professional presentation and portfolio use.
 
 ---
 
 ## Project Structure
 
 ```
-ml_web_app_v1/
-│── data/              # dataset (raw/cleaned)
-│── notebooks/         # exploration & preprocessing
-│── models/            # saved joblib models
-│── app.py             # Streamlit app
-│── requirements.txt   # dependencies
-│── README.md          # project documentation
+ML_Web_App/
+│── Phase_2/                 # Baseline Linear Regression (California Housing)
+│── Phase_3/                 # Streamlit app with sidebar inputs
+│── Phase_4/                 # Tabs, residual plots, download options
+│── Phase_5/                 # Kaggle dataset + model comparison
+│   ├── app.py               # Streamlit app with dropdown model selection
+│   ├── train_models.py      # Training script for 5 selected features
+│   ├── models/              # Saved models (.pkl files)
+│   ├── data/                # Kaggle dataset (train.csv, test.csv)
+│   └── README.md            # Individual Phase project documentation
+│── README.md                # General project documentation
+└── requirements.txt         # Dependencies
 ```
 
 ---
 
-## Deployment
+## Tech Stack
 
-- Hosted on **Streamlit Cloud** (free tier).
-- Public link included in README once deployed.
+- **Python**
+- **Streamlit** (web app framework)
+- **Scikit‑learn** (ML models & preprocessing)
+- **Pandas / NumPy** (data handling)
+- **Matplotlib / Seaborn** (visualizations)
+- **Joblib** (model persistence)
 
 ---
 
-## Future Directions
+## How to Run
 
-- Expand to multiple datasets (Titanic classification in v2).
-- Integrate more interactive visualizations.
-- Explore containerization (Docker) for flexible deployment.
-- Add CI/CD for automated testing and deployment.
+1. Clone the repo and navigate to the desired phase.
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. For Phase 5, download Kaggle’s House Prices dataset (`train.csv`, `test.csv`) and place in `Phase_5/data/`.
+4. Train models:
+   ```bash
+   python train_models.py
+   ```
+5. Run the app:
+   ```bash
+   streamlit run app.py
+   ```
+6. Open the local URL (usually `http://localhost:8501`) in your browser.
+
+---
+
+## Features by Phase
+
+- **Phase 2** → Baseline Linear Regression on California Housing.
+- **Phase 3** → Streamlit app with sidebar inputs.
+- **Phase 4** → Tabs, residual plots, download options.
+- **Phase 5** → Kaggle dataset integration, multiple models, performance comparison.
+
+---
+
+## Next Steps
+
+- **Future Phase**: Add hyperparameter tuning and cross‑validation.
+
+---
+
+## Milestone Context
+
+This project marks **Week 11** of my journey to becoming a **Fullstack AI + Robotics Engineer**. Each phase reflects disciplined learning, reproducibility, and the integration of engineering principles into AI workflows.
