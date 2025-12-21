@@ -4,13 +4,19 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_DIR = os.path.join(BASE_DIR, "models")
+
+
 
 # Load models and scaler
 try:
-    lr = joblib.load("models/linear_regression.pkl")
-    rf = joblib.load("models/rf.pkl")
-    gb = joblib.load("models/gb.pkl")
-    scaler = joblib.load("models/scaler.pkl")
+    lr = joblib.load(os.path.join(MODEL_DIR, "linear_regression.pkl"))
+    rf = joblib.load(os.path.join(MODEL_DIR, "rf.pkl"))
+    gb = joblib.load(os.path.join(MODEL_DIR, "gb.pkl"))
+    scaler = joblib.load(os.path.join(MODEL_DIR, "scaler.pkl"))
 except FileNotFoundError:
     st.error(" Models not found in 'models/' directory. Please run train_models.py first.")
     st.stop()
